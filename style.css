@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    font-family:'poppins', sans-serif ;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:#080808;
+    color:#fff;
+    scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding:10px 10%;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 130px; 
+    cursor: pointer;
+    margin-right:auto;
+    font-size: 50px;
+    font-family: 'Comforter Brush', cursive;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logo:hover{
+    color:  green;
+}
+
+.dot{
+    color:green;
+} 
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;   
+    font-family:"Montserrat", sans-serif;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2.3px;
+    background:green;
+    position: absolute;
+    left: 50%;
+    bottom: 8.8px;
+    transition: 0.2s;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 110%;
+}
+
+.header-text{
+    margin-top: 20%;
+}
+
+.header-text h1{
+    margin-top: 40px;
+    color: green;
+    font-family:"Montserrat", sans-serif;
+    font-size: 80px;
+}
+
+.arrow{
+    width: 35px;
+}
+
+.marquee-w {
+    position: relative;
+    display: block;
+    width: 420px;
+    height: 90px;
+    margin-top: 20px; /* Adjust the margin-top as needed */
+    margin-left: 158px ;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.marquee {
+    position: absolute;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100%;
+    height: 100%;
+}
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    -webkit-text-stroke: 1px white;
+    white-space: nowrap;
+    min-width: 100%;
+    height: 100%;
+    line-height: 35px;
+    font-size: 30px;
+    animation: marquee 5s linear infinite;
+}
+.marquee2 span {
+    animation-delay: 2.5s;
+}
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-106%, 0);
+    }
+}
+
+
+/* ---------------about------------ */
+
+#about{
+    padding: 80px 0;
+    background-color: black;
+}
+
+.about{
+    color: green;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 55%;
+}
+.about-col-1 img{
+    width: 700px;
+    border-radius: 80px;
+    transition: transform 10s;
+}
+
+.about-col-1:hover img{
+    transform: scale(0.8);
+}
+
+.about-col-2{
+    flex-basis: 35%;
+    display: flex;
+}
+
+.sub-title{
+    font-size: 14px;
+    color: white;
+    font-weight:590;
+    font-family:"Montserrat", sans-serif;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    text-align: right;
+}
+
+.about-col-2 h1{
+    padding: 2px;
+    font-family:"Montserrat", sans-serif;
+    color: white;
+    margin-top: 60%;
+}
+
+.text{
+    font-size:12px;
+    font-weight: 400;
+    color:whitesmoke;
+    text-align:justify;
+}
+
+.name{
+    color: green;
+}
+
+.eth_text{
+    color: green;
+}
+
+
+/* ---------------portfolio------------ */
+
+#portfolio{
+    
+    background-color: black;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.work img{
+    width: 100%;
+    display: block;
+}
+
+.wrapper{
+    display: flex;
+}
+.wrapper .static-txt{
+    font-family:"Montserrat", sans-serif;
+    color: white;
+    margin-top: 28px;
+    font-size: 30px;
+    font-weight: 400;
+}
+.wrapper .dynamic-txts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    font-family:"Montserrat", sans-serif;
+    overflow: hidden;
+}
+.dynamic-txts li{
+    list-style: none;
+    color: green;
+    font-size: 30px;
+    font-weight: 500px;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+}
+.dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+}
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 23px;
+    background: black;
+    border-left: 2px solid green;
+    animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+.work{
+    text-align: center; 
+    font-size: 25px;
+    font-family:"Montserrat", sans-serif;
+}
+
+.work img{
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), green);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;    
+}
+
+.layer a{
+    margin-top: 20px;
+    color: green;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 52px;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover .layer{
+    height : 100%
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid green;
+    font-family:"Montserrat", sans-serif;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: green;
+}
+
+/* -----------------------contact-------------- */
+
+#contact{
+    padding: 10%;
+    padding-top: 25px;
+    background-color: black;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-left{
+    flex-basis: 100%;
+    margin-top: 28px;
+}
+
+.contant-text{
+    font-family:"Montserrat", sans-serif;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: green;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.me-color{
+    color: green;
+}
+
+.social-icons{
+    margin-top: 80px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: darkgrey;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+
+.social-icons a:hover{
+    color: green;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;   
+    background: green;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 95%;
+    border: 0;
+    outline: none;
+    background:#262626;
+    padding:15px;
+    margin:15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    margin-left: 18%;
+    font-family:"Montserrat", sans-serif;
+}
+
+textarea {
+    width: 300px; /* Set the initial width */
+    height: 200px; /* Set the initial height */
+    resize: none; /* Prevent the user from resizing the textarea */
+}
+
+form .btn2{
+    padding:14px 60px ;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 18%;
+    transition: transform 0.5s;   
+}
+
+form .btn2:hover{
+    transform: translateY(-5px);
+}
+
+#contact h2{
+    font-family:'Wallpoet', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 80px; 
+    font-size: 50px;
+    transition: transform 10s;   
+}
+
+
+#contact h2:hover{
+    color: green;
+    transform: scale(0.00001);
+    
+}
+
+.line{
+    border-top: 2px solid ;
+    margin: 0;
+    color: green;
+}
+
+.copyright{
+    width: 100%;
+    text-align: left;
+    padding: 25px 0;
+    margin-left: 30px;
+    font-weight: 300;
+    margin-top: 0px;
+    font-family:"Montserrat", sans-serif;
+    background-color: #080808;
+}
+
+
+/* -------------------------------CSS FOR MOBILE---------------------- */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/background_mobile.jpg);
+    }
+    
+    .header-text{
+        margin-top: 280px;
+    }
+    
+    .header-text h1{
+        font-size: 40px;
+        margin-left: 20px;
+    }
+    
+    .arrow{
+        margin-top: 180px;
+        margin-left: 20px;
+        width: 25px;
+    }
+    
+    nav .fa-solid{
+        display: none;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: green;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px; 
+        z-index: 2;
+        transition: right 0.8s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .marquee-w {
+        margin-left: 66px ;
+        width: 313px;
+        height: 50px;
+        margin-top: 0px;
+    }
+    
+    .marquee span {
+        font-size: 20px;
+    }  
+     
+    .about-col-1 img{
+        flex-basis: 100%;
+        width:300px;
+        margin-bottom: -80px;
+    }
+    .about-col-2{
+        flex-basis: 100%;    
+        margin-top: -60px;
+    }
+    
+    .sub-title{
+        font-size: 10px;
+    }
+
+    .sub-title-2{
+        font-size: 20px;
+    }
+    .text{
+        text-align: justify;
+    }
+
+    .contact-right form{
+        width: 130%;
+        margin-top: 30px;
+    }
+
+    #contact h2{
+        font-size: 25px;
+    }
+
+}
